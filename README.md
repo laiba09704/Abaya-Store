@@ -32,4 +32,4 @@ Abaya Store is a basic e-commerce system where users can view products and manag
 5. Run the project in browser:  
    `http://localhost/abaya_store`
 
-## Project Structure
+
