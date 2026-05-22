@@ -1,0 +1,21 @@
+[
+  {"name":"Classy Black Abaya", "category":"abaya", "img":"images/Black.jfif", "page":"abaya.html"},
+  {"name":"Elegant Beige Abaya", "category":"abaya", "img":"images/beige.jfif", "page":"abaya.html"},
+  {"name":"Classy Mehroon Abaya", "category":"abaya", "img":"images/mehroon.jfif", "page":"abaya.html"},
+  {"name":"Elegant Pinkish Abaya", "category":"abaya", "img":"images/pink.jpg", "page":"abaya.html"},
+  {"name":"Classy Brown Abaya", "category":"abaya", "img":"images/brown.jpg", "page":"abaya.html"},
+  {"name":"Black Patchwork Abaya", "category":"abaya", "img":"images/pachwork.jpg", "page":"abaya.html"},
+  {"name":"Elegant Blue Abaya", "category":"abaya", "img":"images/blue.jpg", "page":"abaya.html"},
+  {"name":"Elegant Green Abaya", "category":"abaya", "img":"images/green.jpg", "page":"abaya.html"},
+  {"name":"Mehroon Hijab", "category":"hijab", "img":"images/mehroonscaef.jpg", "page":"hijab.html"},
+  {"name":"Light Pink Hijab", "category":"hijab", "img":"images/light pink.jpg", "page":"hijab.html"},
+  {"name":"Green Hijab", "category":"hijab", "img":"images/light green.jpg", "page":"hijab.html"},
+  {"name":"Dusty Blue Hijab", "category":"hijab", "img":"images/dusty blue.jpg", "page":"hijab.html"},
+  {"name":"Black Hijab", "category":"hijab", "img":"images/black.jpg", "page":"hijab.html"},
+  {"name":"White Hijab", "category":"hijab", "img":"images/white.jpg", "page":"hijab.html"},
+  {"name":"Brown Hijab", "category":"hijab", "img":"images/bwo.jpg", "page":"hijab.html"},
+  {"name":"Purple Hijab", "category":"hijab", "img":"images/purplr.jpg", "page":"hijab.html"},
+  {"name":"Elegant Gray Abaya", "category":"abaya", "img":"images/ha.jpg", "page":"index.html"},
+  {"name":"Classy Purple Abaya", "category":"abaya", "img":"images/purple.jpg", "page":"index.html"},
+  {"name":"New Hoodie Abaya", "category":"abaya", "img":"images/hoodie.jpg", "page":"index.html"}
+]

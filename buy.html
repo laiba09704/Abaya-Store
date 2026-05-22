@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout - Buy Product</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<link href="style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+<div class="top-bar text-white py-2 text-center">
+  <span class="fw-semibold">NO RETURNS / EXCHANGE AFTER DELIVERY</span>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-light bg-light-yellow">
+  <div class="container d-flex align-items-center">
+
+    <!-- Back Arrow -->
+    <a href="javascript:history.back()" class="me-3 text-dark">
+      <i class="bi bi-arrow-left fs-3"></i>
+    </a>
+
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold fs-3 mx-auto" href="index.html">
+      Abaya_Store
+    </a>
+
+  </div>
+</nav>
+
+<div class="container my-5">
+  <h2 class="mb-4 text-center">Checkout</h2>
+
+  <div class="row">
+
+    <!-- Product Details -->
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <img id="productImg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title" id="productName"></h5>
+          <p class="card-text fs-5">Price: Rs. <span id="productPrice"></span></p>
+          <p>Quantity: <span id="productQuantity"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checkout Form -->
+    <div class="col-md-6">
+      <form id="checkoutForm">
+
+        <!-- Hidden fields -->
+        <input type="hidden" name="product_name" id="hiddenProductName">
+        <input type="hidden" name="price" id="hiddenProductPrice">
+        <input type="hidden" name="quantity" id="hiddenProductQuantity">
+
+        <!-- Shipping Address -->
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header golden-header">Shipping Address</div>
+          <div class="card-body">
+
+            <div class="mb-3">
+              <label>Country / Region</label>
+              <input type="text" class="form-control" id="country" name="country">
+              <p id="countryError" class="error"></p>
+            </div>
+
+            <div class="mb-3">
+              <label>First Name</label>
+              <input type="text" class="form-control" id="firstName" name="first_name">
+              <p id="firstNameError" class="error"></p>
+            </div>
+
+            <div class="mb-3">
+              <label>Last Name</label>
+              <input type="text" class="form-control" id="lastName" name="last_name">
+              <p id="lastNameError" class="error"></p>
+            </div>
+
+            <div class="mb-3">
+              <label>Address</label>
+              <textarea class="form-control" id="address" name="address"></textarea>
+              <p id="addressError" class="error"></p>
+            </div>
+
+            <div class="mb-3">
+              <label>Apartment / Suite (optional)</label>
+              <input type="text" class="form-control" name="apartment">
+            </div>
+
+            <div class="mb-3">
+              <label>City / Postal Code</label>
+              <input type="text" class="form-control" name="city">
+            </div>
+
+            <div class="mb-3">
+              <label>Phone</label>
+              <input type="tel" class="form-control" id="contactNumber" name="phone" placeholder="03XXXXXXXXX">
+              <p id="contactNumberError" class="error"></p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Payment -->
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header golden-header">Payment Method</div>
+          <div class="card-body">
+            <input type="text" class="form-control" value="Cash on Delivery" readonly>
+          </div>
+        </div>
+
+        <button type="submit" class="btn w-100 golden-btn">Confirm Order</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="position-fixed top-0 end-0 p-3" style="z-index:9999;">
+  <div id="orderToast" class="toast border-0" style="background:#cda112; color:#fff;">
+    <div class="toast-body fw-bold">
+      ✅ Order done successfully
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get("name");
+  const price = params.get("price");
+  const img = params.get("img");
+  const quantity = params.get("quantity") || 1;
+
+  productName.innerText = name;
+  productPrice.innerText = price;
+  productQuantity.innerText = quantity;
+  productImg.src = img;
+
+  hiddenProductName.value = name;
+  hiddenProductPrice.value = price;
+  hiddenProductQuantity.value = quantity;
+
+  document.getElementById("checkoutForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let valid = true;
+    document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+    if (!country.value.trim()) { countryError.textContent = "Country required"; valid=false; }
+    if (!firstName.value.trim()) { firstNameError.textContent = "First name required"; valid=false; }
+    if (!lastName.value.trim()) { lastNameError.textContent = "Last name required"; valid=false; }
+    if (!address.value.trim()) { addressError.textContent = "Address required"; valid=false; }
+
+    const phonePattern = /^03\d{9}$/;
+    if (!contactNumber.value.trim()) {
+      contactNumberError.textContent = "Phone required";
+      valid=false;
+    } else if (!phonePattern.test(contactNumber.value.trim())) {
+      contactNumberError.textContent = "Invalid phone format";
+      valid=false;
+    }
+
+    if (!valid) return;
+
+    const formData = new FormData(this);
+
+    fetch("buy.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.text())
+    .then(response => {
+      if (response.trim() === "success") {
+        const toast = new bootstrap.Toast(orderToast, { delay: 2000 });
+        toast.show();
+
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 2000);
+      } else {
+        alert("Order failed. Please try again.");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--  Top Bar -->
+  <div class="top-bar text-white py-2 text-center">
+    <span class="fw-semibold">NO RETURNS / EXCHANGE AFTER DELIVERY</span>
+  </div>
+
+  <!--  Navbar -->
+  <nav class="navbar navbar-light bg-light-yellow ">
+    <div class="container d-flex justify-content-between align-items-center">
+      <button
+        class="btn p-0 border-0"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasMenu"
+      >
+        <i class="bi bi-list fs-2"></i>
+      </button>
+
+      <a class="navbar-brand fw-bold fs-3" href="index.html">Abaya_Store</a>
+
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" id="searchIcon" class="text-dark"><i class="bi bi-search fs-5"></i></a>
+        <a href="wishlist.html" class="text-dark"><i class="bi bi-heart fs-5"></i></a>
+        <a href="#" class="text-dark" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar">
+  <i class="bi bi-bag fs-5"></i>
+</a>
+       <a href="login.html" id="personIcon" class="text-dark"><i class="bi bi-person fs-4"></i></a>  
+      </div>
+    </div>
+  </nav> 
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Sidebar -->
+<div class="offcanvas offcanvas-end"  id="cartSidebar">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Your Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body text-center">
+    <p class="text-muted mb-4">Your cart is empty</p>
+    <a href="index.html" class="btn btn-warning">Continue Shopping</a>
+  </div>
+</div>
+
+  <!--  Search Bar -->
+  <div class="search-bar-container text-center mt-1">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Search for abayas, hijabs, or collections..."
+    />
+    <button class="btn btn-dark ms-2">Search</button>
+  </div>
+
+  <!--  Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start"  id="offcanvasMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link active" href="collection.html">Collection</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Sale</a></li>
+         <li><a class="nav-link" href="hijab.html">Hijabs</a></li>
+      </ul>
+    </div>
+  </div> 
+
+ 
+ <!--  About Us Section -->
+  <div class="about-section py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">About Us</h2>
+      <p class="lead mx-auto" style="max-width: 800px; line-height: 1.8;">
+        Welcome to <strong>Abaya_Store</strong> – your trusted destination for modest fashion.  
+        We are passionate about bringing elegance, comfort, and style together through our beautifully designed
+        <strong>abayas</strong> and <strong>hijabs</strong>.  
+        Each piece is crafted with care, inspired by tradition, and tailored for modern women who value
+        modesty with grace.  
+        <br /><br />
+        Our mission is to provide high-quality fabric, unique designs, and affordable prices so every woman
+        can express her individuality confidently. Whether it’s a casual outing or a special event, 
+        we ensure you look your best while feeling comfortable and elegant.
+        <br /><br />
+        Thank you for choosing <strong>Abaya_Store</strong> — where modest fashion meets timeless beauty.
+      </p>
+    </div>
+  </div>
+
+    
+
+
+
+  <!--  Footer -->
+  <div class="footer-links py-5">
+    <div class="container">
+      <div class="row text-start">
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">Information</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://wa.me/">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="return.html">Return & Exchange</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">Top Categories</h5>
+          <ul class="list-unstyled">
+            <li><a href="abaya.html">Abayas</a></li>
+            <li><a href="hijab.html">Hijabs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">Follow Us</h5>
+          <div class="d-flex gap-3">
+            <a href="https://www.facebook.com/" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <h5 class="fw-bold mb-3">Never miss out!</h5>
+          <p>Sign up for updates, discounts, and more.</p>
+          <form class="d-flex">
+            <input type="email" class="form-control me-2" placeholder="Your email address" />
+            <button class="btn btn-dark">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &hearts; 2025 Beautiful and Elegant Abayas | Designed with Love
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+  const searchIcon = document.getElementById('searchIcon');       
+  const searchBar = document.querySelector('.search-bar-container'); 
+  searchIcon.onclick = function(event) {
+    event.preventDefault(); 
+    searchBar.classList.toggle('show'); 
+  }
+</script>
+
+</body>
+</html>

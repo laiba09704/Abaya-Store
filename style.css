@@ -1,0 +1,486 @@
+/* ====== ORIGINAL CSS START ====== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lora', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5efe6;
+}
+
+/* Top bar */
+.top-bar {
+  background-color: #cda112;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+/*  Navbar */
+.bg-light-yellow {
+  background-color: #fff9e6 !important;
+}
+
+.offcanvas-body .nav-link:hover{
+  color: #cda112 !important;
+}
+.navbar a:hover i {
+  color: #cda112 !important;
+}
+
+/* Search Bar (Hidden by default) */
+.search-bar-container {
+  display: none;
+  background-color: #fff9e6;
+  padding: 15px;
+  border-bottom: 2px solid #cda112;
+  transition: all 0.3s ease;
+}
+
+.search-bar-container.show {
+  display: block;
+}
+
+.search-input {
+  width: 60%;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url('images/hero.png');
+  background-size: cover;
+  background-position: center top;
+  height: 80vh;
+  position: relative;
+}
+
+/*  Cart Sidebar Background */
+#cartSidebar {
+  background-color: #fff9e6 !important;
+  color: #000;  
+}
+
+/*  Gold Line */
+
+/*  Collection */
+.Collection {
+  font-size: small;
+  text-align: center;
+  padding: 100px 20px;
+  color: rgb(90, 35, 35);
+}
+
+/*  Products */
+.Products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 20px;
+}
+
+.product_item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  width: 250px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product_item:hover {
+  transform: translateY(-5px);
+}
+
+.product_item img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.product_item h2 {
+  margin: 15px 0;
+  font-size: 19px;
+}
+
+.product_item p {
+  color: #d4af37;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Footer Links */
+.footer-links {
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  color: #333;
+}
+
+.footer-links ul li a:hover {
+  color: #cda112;
+}
+
+/* Social Icons */
+.social-icon {
+  background-color: #000;
+  color: white;
+  font-size: 1.4rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #cda112;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: white;
+  font-size: 14px;
+}
+/*  make only the list links black */
+.footer-links ul li a {
+  color: #000 !important;     
+  text-decoration: none;      
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #cda112 !important;             
+}
+
+/* Login Form */
+#loginForm {
+  background-color: #fff9e6;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  font-family: 'Lora', serif;
+}
+
+#loginForm h2 {
+  text-align: center;
+  color: rgb(90, 35, 35);
+  margin-bottom: 20px;
+}
+
+#loginForm label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="email"],
+#loginForm input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#loginForm input[type="submit"] {
+  margin-top: 15px;
+  background-color: #cda112;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#loginForm input[type="submit"]:hover {
+  background-color: #a7860d;
+}
+
+
+#loginForm .error {
+  color: red;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+#loginForm .success {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#loginForm .create-account {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#loginForm .create-account a {
+  color: #cda112;
+  text-decoration: none;
+}
+
+#loginForm .create-account a:hover {
+  text-decoration: underline;
+}
+ 
+/* PERFECT HERO BANNER SLIDER */
+.hero-slide {
+  height: 70vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+}
+
+/* YOUR IMAGES */
+.slide-1 {
+   background-image: url("images/hero.png");
+}
+
+.slide-2 {
+  background-image: url("images/Capture.png");
+}
+
+/* Arrow visibility */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.gold_line {
+  width: 100%;
+  height: 2.5px;
+  background-color: #cda112;
+}
+
+
+.product_item a {
+  text-decoration: none;
+  color: inherit;
+}
+/* ====== ORIGINAL CSS END ====== */
+
+/* ====== PRODUCT ITEM DETAIL CSS START ====== */
+.product-detail {
+  max-width: 900px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.product-detail img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-detail h2,
+.product-detail p {
+  color: black; /* Ensure text is black */
+}
+
+.price {
+  color: #cda112;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.action-btns button {
+  margin-right: 10px;
+}
+
+.wishlist {
+  color: #cda112;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Back Arrow */
+.back-arrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 5px 12px;
+  background-color: #cda112;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-arrow:hover {
+  background-color: #a7860d;
+  color: #fff;
+}
+/* ====== PRODUCT ITEM DETAIL CSS END ====== */
+/* Simple top-left back arrow for product detail page */
+.product-detail .back-arrow-simple {
+  position: absolute;
+  top: 15px;
+  left: 1px;
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 10;
+}
+
+.product-detail .back-arrow-simple:hover {
+  color: #cda112;
+}
+ /* Heart toggle animation */
+    .wishlist {
+      color: #cda112;
+      font-size: 22px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .wishlist.animate {
+      transform: scale(1.4);
+    }
+
+    /* Hover effect for clickable wishlist items */
+    .wishlist-click {
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .wishlist-click:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+  
+/* Back arrow */
+#backArrow {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+#backArrow:hover {
+  color: #cda112;
+}
+
+/* Search box container */
+.search-wrapper {
+  position: relative;
+  max-width: 500px;
+  margin: 50px auto 20px auto;
+}
+
+/* Input field */
+#searchInput {
+  width: 100%;
+  padding: 10px 50px 10px 15px; /* right padding for button */
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#searchInput:hover, #searchInput:focus {
+  border-color: #cda112;
+  box-shadow: 0 0 5px #cda112;
+}
+
+/* Search button */
+#searchBtn {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#searchBtn:hover {
+  background: #cda112;
+  color: #000;
+}
+
+/* Suggestions dropdown */
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+}
+
+.suggestion_item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion_item:hover, .suggestion_item.active {
+  background: #f1f1f1;
+}
+
+/* No products found message */
+#noResult {
+  display: none;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+/* buyPage error handle */
+.error {
+   color: red;
+   font-size: 0.9rem; 
+   margin-top: 2px;
+  }
+
+  .golden-header { 
+    background-color: #a7860d; 
+    color: #fff; 
+    font-weight: bold; 
+  }
+
+  .golden-btn { 
+    background-color: #a7860d; 
+    color: #fff; 
+    border: none; 
+    font-weight: bold; 
+    padding: 10px 0; 
+    font-size: 1.1rem; 
+  }
+  .golden-btn:hover { 
+    background-color: #d4b84c; 
+  }
